@@ -1,25 +1,264 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Dress Shop</title>
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcf8f8;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #b57c7c;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #b57c7c;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background-color: #f3e8e8;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #4a3b3b;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #776666;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            background-color: #b57c7c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #966161;
+        }
+
+        /* Main Products Section */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            position: relative;
+            color: #4a3b3b;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Cards */
+        .product-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 350px;
+            background-color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #888;
+            font-style: italic;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #b57c7c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            background-color: transparent;
+            border: 2px solid #b57c7c;
+            color: #b57c7c;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #b57c7c;
+            color: white;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #4a3b3b;
+            color: #fcf8f8;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
 <body>
-{% for i in pr %}
-{{ i.pid }}<br>
 
-{{ i.fname }}<br>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">Elegance</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Dresses</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-{% if i.pimg %}
-<img src="{{i.pimg.url}}" width="200">
-{% else %}
-no image
-{% endif %}
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <h1>The Summer Collection</h1>
+        <p>Find the perfect dress for any special occasion.</p>
+        <a href="#" class="cta-btn">Shop Now</a>
+    </section>
 
-{% if i.files %}
-<a href="{{ i.files.url }}" download>download item</a>
-{% else %}
-no files found
+    <!-- Main Products Section -->
+    <main class="container">
+        <h2 class="section-title">Featured Dresses</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- Replace text with <img src="your-image.jpg" alt="Floral Dress"> later -->
+                    [ Floral Maxi Dress Image ]
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Floral Maxi Dress</div>
+                    <div class="product-price">$59.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
 
-{% endif %}
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    [ Classic Little Black Dress ]
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Little Black Dress</div>
+                    <div class="product-price">$45.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
 
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    [ Linen Sun Dress ]
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Linen Sun Dress</div>
+                    <div class="product-price">$39.99</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<hr>
-{% endfor %}
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Elegance Dress Shop. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
