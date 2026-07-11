@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+y-#%)f_9g8fabp*j!o_i&t78q^0rikt2(7!ky=)#dgc8*y*j8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ragul-1.onrender.com]
+ALLOWED_HOSTS = [ragul-1.onrender.com ragul-1.onrender.com]
 
 
 # Application definition
